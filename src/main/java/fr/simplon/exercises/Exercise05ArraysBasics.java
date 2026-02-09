@@ -13,7 +13,11 @@ public class Exercise05ArraysBasics {
      * @return un tableau [1, 2, 3, ..., n]
      */
     public int[] createSequence(int n) {
-        throw new UnsupportedOperationException();
+        int [] sequence = new int[n];
+        for (int i = 0; i<n; i++) {
+            sequence[i] = i + 1;
+        }
+        return sequence;
 
     }
     
@@ -23,8 +27,7 @@ public class Exercise05ArraysBasics {
      * @return le premier élément
      */
     public int getFirstElement(int[] array) {
-        throw new UnsupportedOperationException();
-
+        return array[0];
     }
     
     /**
@@ -33,7 +36,7 @@ public class Exercise05ArraysBasics {
      * @return le dernier élément
      */
     public int getLastElement(int[] array) {
-        throw new UnsupportedOperationException();
+        return array[array.length - 1];
 
     }
     
@@ -44,7 +47,13 @@ public class Exercise05ArraysBasics {
      * @return le nombre d'occurrences
      */
     public int countOccurrences(int[] array, int value) {
-        throw new UnsupportedOperationException();
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                count++;
+            }
+        }
+        return count;
 
     }
     
@@ -55,7 +64,14 @@ public class Exercise05ArraysBasics {
      * @return true si la valeur est présente, false sinon
      */
     public boolean contains(int[] array, int value) {
-        throw new UnsupportedOperationException();
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+           if (array[i] == value) {
+                count++;
+            }
+        }
+        return count > 0;
+    
 
     }
 }

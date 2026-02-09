@@ -12,7 +12,8 @@ public class Exercise01VariableAssignment {
      * @return la valeur 42
      */
     public int assignInteger() {
-        throw new UnsupportedOperationException();
+       int x = 42;
+       return x;
     }
     
     /**
@@ -20,7 +21,9 @@ public class Exercise01VariableAssignment {
      * @return ton prénom
      */
     public String assignString() {
-        throw new UnsupportedOperationException();
+         String name = "julien";
+        return name;
+        
     }
     
     /**
@@ -28,6 +31,7 @@ public class Exercise01VariableAssignment {
      * @return la valeur true
      */
     public boolean assignBoolean() {
-        throw new UnsupportedOperationException();
+        boolean b = true;
+        return b;
     }
 }
