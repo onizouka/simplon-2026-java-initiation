@@ -14,8 +14,16 @@ public class Exercise13SimpleSearch {
      * @return true si le tableau est trié, false sinon
      */
     public boolean isSorted(int[] array) {
-        throw new UnsupportedOperationException();
-
+        if (array.length == 0){
+            return true;
+        }
+        for(int i = 0; i<array.length -1; i++) {
+            if (array[i]> array[i+1]){
+                return false;
+            }
+        }
+        
+      return true;
     }
     
     /**

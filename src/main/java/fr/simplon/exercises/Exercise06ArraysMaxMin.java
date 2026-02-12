@@ -13,7 +13,14 @@ public class Exercise06ArraysMaxMin {
      * @return la valeur maximale
      */
     public int findMax(int[] array) {
-        throw new UnsupportedOperationException();
+       
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+       return max;
 
     }
     
@@ -22,8 +29,14 @@ public class Exercise06ArraysMaxMin {
      * @param array le tableau
      * @return la valeur minimale
      */
-    public int findMin(int[] array) {
-        throw new UnsupportedOperationException();
+    public int findMin(int[] array) { 
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+       return min;
 
     }
     
@@ -33,7 +46,15 @@ public class Exercise06ArraysMaxMin {
      * @return l'index de la valeur maximale (le premier si plusieurs)
      */
     public int findMaxIndex(int[] array) {
-        throw new UnsupportedOperationException();
+        if (array.length == 0) {
+           return -1;  
+        }   
+        int idx = 0;
+        for (int i = 1; i < array.length; i++) {
+            idx = array[i] > array[idx] ? i : idx;  
+        }
+    
+        return idx;
 
     }
     
@@ -43,8 +64,14 @@ public class Exercise06ArraysMaxMin {
      * @return l'index de la valeur minimale (le premier si plusieurs)
      */
     public int findMinIndex(int[] array) {
-        throw new UnsupportedOperationException();
-
+        if (array.length == 0) {
+            return -1;  
+        } 
+        int idx = 0;
+        for (int i = 1; i < array.length; i++) {
+            idx = array[i] < array[idx] ? i : idx;  
+        }
+        return idx;
     }
     
     /**
@@ -53,7 +80,10 @@ public class Exercise06ArraysMaxMin {
      * @return la différence max - min
      */
     public int range(int[] array) {
-        throw new UnsupportedOperationException();
+        if (array.length == 0) {
+            return 0;  
+        }
+        return findMax(array) - findMin(array);
 
     }
 }
